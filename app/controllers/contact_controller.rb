@@ -2,8 +2,7 @@ class ContactController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def create
-    contact = Contact.create(contact_params)
-    NoticeContactMailer.with(contact: contact).notice.deliver_now
+    Contact.create(contact_params)
     redirect_to "#{request.referer}/thanks"
   end
 
