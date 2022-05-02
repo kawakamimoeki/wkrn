@@ -3,7 +3,7 @@ class ContactController < ApplicationController
 
   def create
     Contact.create(contact_params)
-    redirect_to "#{request.referer}/thanks"
+    redirect_to("#{request.referer}contact/thanks", allow_other_host: true)
   end
 
   def index
