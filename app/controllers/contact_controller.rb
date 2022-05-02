@@ -3,7 +3,7 @@ class ContactController < ApplicationController
 
   def create
     contact = Contact.create(contact_params)
-    NoticaContactMailer.with(contact: contact).notice.deliver_later
+    NoticeContactMailer.with(contact: contact).notice.deliver_later
     redirect_to "#{request.referer}/thanks"
   end
 
