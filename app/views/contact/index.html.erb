@@ -1,0 +1,24 @@
+<h1>お便り</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ラジオネーム</th>
+      <th scope="col">メールアドレス</th>
+      <th scope="col">エピソード</th>
+      <th scope="col">本文</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+    <tr>
+      <th scope="row"><%= contact.id %></th>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.episode %></td>
+      <td><%= contact.content %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
