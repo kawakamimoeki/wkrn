@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: wkrn_production
-  username: wkrn
-  password: <%= ENV["WKRN_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
